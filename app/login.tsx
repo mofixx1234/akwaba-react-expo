@@ -1,11 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link, router } from 'expo-router';
-import { Platform } from 'react-native';
-import { Image, Text, View } from 'react-native';
+import { Image, Platform, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { InputField, PrimaryButton } from '@/components/auth/auth-ui';
-import { AkwabaColors } from '@/constants/akwaba-theme';
 
 export default function LoginScreen() {
   return (
@@ -81,7 +79,7 @@ export default function LoginScreen() {
               <View className="absolute bottom-1 right-1 h-4 w-4 rounded-full border-2 border-white bg-green-500" />
             </View>
             <Text className="max-w-[240px] text-center text-sm font-medium leading-6 text-[#40493D]">
-              Besoin d'aide ? Nos conseillers Akwaba sont là pour vous.
+              Besoin d’aide ? Nos conseillers Akwaba sont là pour vous.
             </Text>
           </View>
         </View>

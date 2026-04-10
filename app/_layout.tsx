@@ -41,7 +41,7 @@ export default function RootLayout() {
   return (
     // Applique le bon thème à toute l'arborescence de navigation.
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack initialRouteName="login">
         {/* Ecran principal (onglets) sans header */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         {/* Ecran de connexion */}
@@ -52,6 +52,13 @@ export default function RootLayout() {
         <Stack.Screen name="config-profil" options={{ headerShown: false }} />
         {/* Ecran de succès après inscription */}
         <Stack.Screen name="success" options={{ headerShown: false }} />
+        <Stack.Screen name="rendez-vous" options={{ headerShown: false }} />
+        <Stack.Screen name="confirmation-rdv" options={{ headerShown: false }} />
+        <Stack.Screen name="conseil-bien-etre" options={{ headerShown: false }} />
+        <Stack.Screen name="partenaires" options={{ headerShown: false }} />
+        <Stack.Screen name="centre-notifications" options={{ headerShown: false }} />
+        <Stack.Screen name="urgences-contacts" options={{ headerShown: false }} />
+        <Stack.Screen name="souvenirs" options={{ headerShown: false }} />
         {/* Modal générique */}
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
       </Stack>
