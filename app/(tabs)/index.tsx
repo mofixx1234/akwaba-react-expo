@@ -42,11 +42,11 @@ export default function HomeScreen() {
     <SafeAreaView className="flex-1 bg-[#F9F9F9]" edges={['top']}>
       <View className="h-16 flex-row items-center justify-between bg-[#F9F9F9] px-4">
         <View className="flex-row items-center gap-3">
-          <Pressable
+          {/* <Pressable
             className="h-10 w-10 items-center justify-center rounded-full active:bg-[#E8E8E8]"
             onPress={() => router.back()}>
             <Ionicons color="#00569F" name="arrow-back" size={26} />
-          </Pressable>
+          </Pressable> */}
           <Text className="text-xl font-bold tracking-tight text-[#00569F]">Akwaba</Text>
         </View>
         <View className="h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-sm">

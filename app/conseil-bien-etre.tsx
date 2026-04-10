@@ -3,6 +3,8 @@ import { router } from 'expo-router';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { AkwabaHomeBottomNav, replaceWithHomeTab } from '@/components/home/akwaba-home-bottom-nav';
+
 const HERO =
   'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80';
 
@@ -62,7 +64,10 @@ export default function ConseilBienEtreScreen() {
         <View className="w-10" />
       </View>
 
-      <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 100 + insets.bottom }} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        className="flex-1"
+        contentContainerStyle={{ paddingBottom: 120 + insets.bottom }}
+        showsVerticalScrollIndicator={false}>
         <View className="mx-auto w-full max-w-2xl gap-6 px-4 pt-6">
           <View className="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
             <View className="relative aspect-[2/1] w-full">
@@ -154,31 +159,7 @@ export default function ConseilBienEtreScreen() {
         </View>
       </ScrollView>
 
-      <View className="absolute bottom-0 left-0 right-0 z-50 rounded-t-[48px] bg-stone-50 pt-3 shadow-lg" style={{ paddingBottom: Math.max(insets.bottom, 12), shadowColor: '#00569F', shadowOpacity: 0.06, shadowRadius: 20, shadowOffset: { width: 0, height: -4 } }}>
-        <View className="mx-auto w-full max-w-md flex-row items-end justify-between gap-1 px-2">
-          <Pressable className="items-center rounded-2xl bg-blue-100 px-1 py-2" onPress={() => router.replace('/(tabs)')}>
-            <Ionicons color="#1E3A8A" name="home" size={22} />
-            <Text className="text-[11px] font-bold text-blue-900">Accueil</Text>
-          </Pressable>
-          <Pressable className="items-center rounded-2xl px-1 py-2" onPress={() => router.push('/explore')}>
-            <Ionicons color="#57534E" name="map-outline" size={22} />
-            <Text className="text-[11px] font-bold text-stone-600">Carte</Text>
-          </Pressable>
-          <View className="items-center pb-1">
-            <Pressable className="h-14 w-14 -translate-y-3 items-center justify-center rounded-full bg-[#00569F] shadow-lg active:opacity-90" onPress={() => router.push('/(tabs)/add')}>
-              <Ionicons color="#FFFFFF" name="add" size={28} />
-            </Pressable>
-          </View>
-          <Pressable className="items-center rounded-2xl px-1 py-2" onPress={() => router.push('/sos')}>
-            <Ionicons color="#57534E" name="warning-outline" size={22} />
-            <Text className="text-[11px] font-bold text-stone-600">SOS</Text>
-          </Pressable>
-          <Pressable className="items-center rounded-2xl px-1 py-2" onPress={() => router.push('/profil')}>
-            <Ionicons color="#57534E" name="person-outline" size={22} />
-            <Text className="text-[11px] font-bold text-stone-600">Profil</Text>
-          </Pressable>
-        </View>
-      </View>
+      <AkwabaHomeBottomNav activeTab={null} onNavigateToTab={replaceWithHomeTab} />
     </SafeAreaView>
   );
 }
