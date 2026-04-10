@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Akwaba - Espace Souvenirs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#f9f9f9",
+                        surface: "#ffffff",
+                        "surface-soft": "#f3f4f6",
+                        primary: "#00569f",
+                        secondary: "#106d20",
+                        tertiary: "#993300",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#4b5563"
+                    },
+                    fontFamily: {
+                        body: ["Lexend", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen pb-32">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button class="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary">arrow_back</span>
+                </button>
+                <div>
+                    <p class="text-xs font-semibold text-on-surface-variant">Module émotionnel</p>
+                    <h1 class="text-lg font-extrabold text-primary leading-tight">Espace Souvenirs</h1>
+                </div>
+            </div>
+            <button class="px-4 py-2 rounded-full bg-primary text-white font-bold text-sm">Partager</button>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-6 space-y-6">
+        <section class="bg-white rounded-3xl p-5 shadow-sm border border-black/5">
+            <h2 class="text-2xl font-black tracking-tight">Un souvenir, un sourire</h2>
+            <p class="text-on-surface-variant mt-2">
+                Retrouvez ici les photos et les messages vocaux envoyés par vos proches pour vous rassurer et garder
+                le lien chaque jour.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
+                <div class="bg-blue-50 text-primary rounded-2xl p-3">
+                    <p class="text-xs font-semibold uppercase">Photos</p>
+                    <p class="text-2xl font-black mt-1">24</p>
+                </div>
+                <div class="bg-green-50 text-secondary rounded-2xl p-3">
+                    <p class="text-xs font-semibold uppercase">Vocaux</p>
+                    <p class="text-2xl font-black mt-1">9</p>
+                </div>
+                <div class="bg-orange-50 text-tertiary rounded-2xl p-3">
+                    <p class="text-xs font-semibold uppercase">Famille</p>
+                    <p class="text-2xl font-black mt-1">6</p>
+                </div>
+                <div class="bg-surface-soft text-on-surface rounded-2xl p-3">
+                    <p class="text-xs font-semibold uppercase">Dernier</p>
+                    <p class="text-base font-black mt-1">Aujourd'hui</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl font-extrabold">Photos récentes</h3>
+                <button class="text-primary font-bold text-sm">Voir tout</button>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <article class="rounded-2xl overflow-hidden bg-white border border-black/5 shadow-sm">
+                    <img alt="Famille souriante au salon" class="w-full h-32 object-cover"
+                        src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1200&auto=format&fit=crop" />
+                    <div class="p-3">
+                        <p class="font-bold text-sm">Dimanche en famille</p>
+                        <p class="text-xs text-on-surface-variant mt-1">Envoyé par Awa</p>
+                    </div>
+                </article>
+                <article class="rounded-2xl overflow-hidden bg-white border border-black/5 shadow-sm">
+                    <img alt="Photo de petits-enfants" class="w-full h-32 object-cover"
+                        src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1200&auto=format&fit=crop" />
+                    <div class="p-3">
+                        <p class="font-bold text-sm">Les petits-enfants</p>
+                        <p class="text-xs text-on-surface-variant mt-1">Envoyé par Mamadou</p>
+                    </div>
+                </article>
+                <article class="rounded-2xl overflow-hidden bg-white border border-black/5 shadow-sm">
+                    <img alt="Anniversaire avec un gateau" class="w-full h-32 object-cover"
+                        src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=1200&auto=format&fit=crop" />
+                    <div class="p-3">
+                        <p class="font-bold text-sm">Souvenir anniversaire</p>
+                        <p class="text-xs text-on-surface-variant mt-1">Envoyé par Fatou</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl font-extrabold">Messages vocaux</h3>
+                <button class="text-primary font-bold text-sm">Tout écouter</button>
+            </div>
+            <article class="bg-white rounded-2xl border border-black/5 p-4 shadow-sm flex items-center gap-3">
+                <button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                </button>
+                <div class="flex-1">
+                    <p class="font-bold">Message de Koffi</p>
+                    <p class="text-xs text-on-surface-variant">"On pense fort a toi. Passe une belle journee."</p>
+                </div>
+                <span class="text-xs font-semibold text-on-surface-variant">00:42</span>
+            </article>
+            <article class="bg-white rounded-2xl border border-black/5 p-4 shadow-sm flex items-center gap-3">
+                <button class="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                </button>
+                <div class="flex-1">
+                    <p class="font-bold">Message de Awa</p>
+                    <p class="text-xs text-on-surface-variant">"Demain on vient te voir avec les enfants."</p>
+                </div>
+                <span class="text-xs font-semibold text-on-surface-variant">01:13</span>
+            </article>
+        </section>
+
+        <section class="bg-white rounded-3xl border border-black/5 p-5 shadow-sm space-y-4" id="ajout-souvenir">
+            <div class="flex items-start justify-between gap-3">
+                <div>
+                    <h3 class="text-xl font-extrabold">Ajouter un souvenir</h3>
+                    <p class="text-sm text-on-surface-variant mt-1">Choisissez un type puis renseignez les details.</p>
+                </div>
+                <span class="material-symbols-outlined text-primary">add_circle</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <button
+                    class="souvenir-type-btn active-type rounded-2xl border border-blue-200 bg-blue-50 text-primary p-4 text-left"
+                    data-type="photo">
+                    <span class="material-symbols-outlined">photo_camera</span>
+                    <p class="font-bold mt-2">Photo</p>
+                    <p class="text-xs mt-1 opacity-80">Importer une image</p>
+                </button>
+                <button
+                    class="souvenir-type-btn rounded-2xl border border-black/10 bg-surface-soft text-on-surface p-4 text-left"
+                    data-type="audio">
+                    <span class="material-symbols-outlined">mic</span>
+                    <p class="font-bold mt-2">Vocal</p>
+                    <p class="text-xs mt-1 opacity-80">Enregistrer un message</p>
+                </button>
+                <button
+                    class="souvenir-type-btn rounded-2xl border border-black/10 bg-surface-soft text-on-surface p-4 text-left"
+                    data-type="texte">
+                    <span class="material-symbols-outlined">edit_note</span>
+                    <p class="font-bold mt-2">Texte</p>
+                    <p class="text-xs mt-1 opacity-80">Ecrire un souvenir</p>
+                </button>
+            </div>
+
+            <form class="space-y-3">
+                <div>
+                    <label class="text-sm font-bold text-on-surface" for="auteur">Auteur</label>
+                    <input
+                        class="mt-1 w-full rounded-xl border border-black/10 bg-surface-soft px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30"
+                        id="auteur" name="auteur" placeholder="Ex: Awa" type="text" />
+                </div>
+
+                <div id="champ-photo">
+                    <label class="text-sm font-bold text-on-surface" for="photo-url">URL de la photo</label>
+                    <input
+                        class="mt-1 w-full rounded-xl border border-black/10 bg-surface-soft px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30"
+                        id="photo-url" name="photo-url" placeholder="https://..." type="url" />
+                </div>
+
+                <div class="hidden" id="champ-audio">
+                    <label class="text-sm font-bold text-on-surface" for="audio-note">Message vocal</label>
+                    <textarea
+                        class="mt-1 w-full rounded-xl border border-black/10 bg-surface-soft px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30"
+                        id="audio-note" name="audio-note" placeholder="Ex: Bonne journee, on t'aime !" rows="3"></textarea>
+                </div>
+
+                <div class="hidden" id="champ-texte">
+                    <label class="text-sm font-bold text-on-surface" for="texte-souvenir">Texte du souvenir</label>
+                    <textarea
+                        class="mt-1 w-full rounded-xl border border-black/10 bg-surface-soft px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30"
+                        id="texte-souvenir" name="texte-souvenir" placeholder="Ecris ton souvenir ici..." rows="4"></textarea>
+                </div>
+
+                <button class="w-full rounded-full bg-primary text-white font-black py-3.5">Publier le souvenir</button>
+            </form>
+        </section>
+
+        <section class="space-y-3 pb-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl font-extrabold">Souvenirs ajoutes</h3>
+                <button class="text-primary font-bold text-sm">Filtrer</button>
+            </div>
+            <div class="space-y-3">
+                <article class="bg-white rounded-2xl border border-black/5 p-4 shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <p class="font-bold">Photo envoyee par Awa</p>
+                        <span class="text-xs text-on-surface-variant">Aujourd'hui</span>
+                    </div>
+                    <p class="text-sm text-on-surface-variant mt-1">Souvenir du dimanche en famille.</p>
+                </article>
+                <article class="bg-white rounded-2xl border border-black/5 p-4 shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <p class="font-bold">Vocal de Koffi</p>
+                        <span class="text-xs text-on-surface-variant">Hier</span>
+                    </div>
+                    <p class="text-sm text-on-surface-variant mt-1">Message de soutien et de reassurance.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-black/5 px-4 py-4">
+        <div class="max-w-3xl mx-auto">
+            <button
+                class="w-full bg-primary text-white rounded-full py-4 font-black text-lg flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">add_circle</span>
+                Ajouter un souvenir
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const typeButtons = document.querySelectorAll(".souvenir-type-btn");
+        const champPhoto = document.getElementById("champ-photo");
+        const champAudio = document.getElementById("champ-audio");
+        const champTexte = document.getElementById("champ-texte");
+
+        function activateType(type) {
+            typeButtons.forEach((btn) => {
+                const isActive = btn.dataset.type === type;
+                btn.classList.toggle("active-type", isActive);
+                btn.classList.toggle("bg-blue-50", isActive);
+                btn.classList.toggle("border-blue-200", isActive);
+                btn.classList.toggle("text-primary", isActive);
+                btn.classList.toggle("bg-surface-soft", !isActive);
+                btn.classList.toggle("border-black/10", !isActive);
+                btn.classList.toggle("text-on-surface", !isActive);
+            });
+
+            champPhoto.classList.toggle("hidden", type !== "photo");
+            champAudio.classList.toggle("hidden", type !== "audio");
+            champTexte.classList.toggle("hidden", type !== "texte");
+        }
+
+        typeButtons.forEach((btn) => {
+            btn.addEventListener("click", () => activateType(btn.dataset.type));
+        });
+    </script>
+</body>
+
+</html>

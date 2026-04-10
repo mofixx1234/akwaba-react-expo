@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation de Rendez-vous - Akwaba Senior</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#005faf",
+                    "secondary-container": "#9df898",
+                    "on-tertiary-fixed-variant": "#802a00",
+                    "tertiary": "#993300",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#9df898",
+                    "on-tertiary-container": "#ffeee8",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#40493d",
+                    "tertiary-fixed-dim": "#ffb59a",
+                    "secondary": "#106d20",
+                    "primary": "#00569f",
+                    "on-background": "#1a1c1c",
+                    "on-primary-fixed-variant": "#004786",
+                    "surface": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9f9",
+                    "outline-variant": "#bfcaba",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#002204",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#a5c8ff",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-container": "#ecf1ff",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface-container": "#eeeeee",
+                    "inverse-primary": "#a5c8ff",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#006eca",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#1a7425",
+                    "on-surface": "#1a1c1c",
+                    "primary-fixed": "#d4e3ff",
+                    "surface-dim": "#dadada",
+                    "on-primary-fixed": "#001c3a",
+                    "outline": "#707a6c",
+                    "on-tertiary-fixed": "#380d00",
+                    "secondary-fixed-dim": "#82db7e",
+                    "tertiary-fixed": "#ffdbcf",
+                    "tertiary-container": "#c24300",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container-high": "#e8e8e8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Lexend"],
+                    "body": ["Lexend"],
+                    "label": ["Lexend"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#f9f9f9] dark:bg-gray-900">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-screen-xl mx-auto">
+<button class="active:scale-95 transition-transform p-2">
+<span class="material-symbols-outlined text-[#00569f] dark:text-blue-400 text-3xl">arrow_back</span>
+</button>
+<h1 class="font-lexend text-2xl font-bold tracking-tight text-[#00569f] dark:text-blue-400">Confirmation</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center px-6 pt-8 pb-32 max-w-md mx-auto w-full">
+<!-- Success Icon Section -->
+<div class="mb-10 flex flex-col items-center">
+<div class="w-32 h-32 rounded-full bg-secondary-container flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-on-secondary-container text-7xl" style="font-variation-settings: 'wght' 600;">check_circle</span>
+</div>
+<h2 class="text-3xl font-extrabold text-on-surface text-center leading-tight mb-4 px-2">Rendez-vous confirmé</h2>
+<p class="text-xl text-center text-on-surface-variant font-medium leading-relaxed">Félicitations ! Votre rendez-vous est confirmé.</p>
+</div>
+<!-- Appointment Card (Asymmetric / Bento Style) -->
+<div class="w-full space-y-4">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_20px_rgba(0,86,159,0.04)] flex items-center gap-6">
+<div class="w-20 h-20 rounded-full overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Dr. Sylvie Moreau" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a kind mature female doctor in a white coat with a friendly smile in a bright medical office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0touXmp1g_Q9xgLkUskwcfGO0hN2k0hfpp_SqCnbNOhtwG_zi5Wkw8wCht51wBs6vSNffKSmgfQ0DsdC_DlFQdhhc8G7k4u9MH6QakZPkGTnyQ4L5WPhoXTIyHfVz7gEddJqm62wFfjJ9ErUcUFq0L5Nrkt2HPccBoRAFVGRU7JCv3PR370IazGmrnYpgGdb2wHfZdPH3e9BXZ4zTez4M5zeav7k9fU6OUWrjdkjwjiuZ-RfoWysxA4617bRO_h82KgZmO8Snl-g"/>
+</div>
+<div>
+<p class="text-primary text-sm font-bold uppercase tracking-wider mb-1">Partenaire</p>
+<p class="text-2xl font-bold text-on-surface">Dr. Sylvie Moreau</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2">calendar_today</span>
+<p class="text-on-surface-variant text-sm font-semibold mb-1">Date</p>
+<p class="text-lg font-bold text-on-surface">Lundi 23 Octobre</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2">schedule</span>
+<p class="text-on-surface-variant text-sm font-semibold mb-1">Heure</p>
+<p class="text-lg font-bold text-on-surface">14:00</p>
+</div>
+</div>
+</div>
+<!-- Reassurance Message -->
+<div class="mt-8 bg-primary-fixed bg-opacity-30 p-6 rounded-xl border-l-4 border-primary flex items-start gap-4 w-full">
+<span class="material-symbols-outlined text-primary mt-1">notifications_active</span>
+<p class="text-on-primary-fixed-variant font-medium leading-normal">Vous recevrez un rappel 24h avant.</p>
+</div>
+<!-- Primary Action -->
+<div class="fixed bottom-10 left-0 w-full px-6 flex justify-center pointer-events-none">
+<button class="pointer-events-auto w-full max-w-md bg-primary text-on-primary py-5 rounded-full text-xl font-bold shadow-lg hover:opacity-90 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">home</span>
+                Retour à l'accueil
+            </button>
+</div>
+<!-- SOS FAB Suppression Logic: Not rendered as this is a confirmation screen -->
+</main>
+<!-- BottomNavBar (Hidden per Suppression Rules: Focused Journey) -->
+<!-- Suppressed to prioritize the confirmation content canvas -->
+<!-- For navigation screens, we would use the BottomNavBar logic but here it's suppressed -->
+<!-- The user is in a focused success journey -->
+</body></html>

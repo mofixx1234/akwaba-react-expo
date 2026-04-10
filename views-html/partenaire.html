@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "primary-fixed": "#d4e3ff",
+                        "on-surface-variant": "#40493d",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed-variant": "#004786",
+                        "outline-variant": "#bfcaba",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#006eca",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffdbcf",
+                        "inverse-on-surface": "#f1f1f1",
+                        "secondary-fixed": "#9df898",
+                        "secondary": "#106d20",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#001c3a",
+                        "tertiary-container": "#c24300",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-fixed": "#002204",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-secondary-fixed-variant": "#005312",
+                        "inverse-primary": "#a5c8ff",
+                        "secondary-fixed-dim": "#82db7e",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#1a7425",
+                        "on-primary-container": "#ecf1ff",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#707a6c",
+                        "surface-tint": "#005faf",
+                        "on-background": "#1a1c1c",
+                        "primary": "#00569f",
+                        "on-tertiary-container": "#ffeee8",
+                        "secondary-container": "#9df898",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#993300",
+                        "primary-fixed-dim": "#a5c8ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen flex flex-col pb-40">
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface dark:bg-stone-950 flex items-center justify-between px-6 w-full h-20 pt-4 sticky top-0 z-40">
+        <div class="flex items-center gap-4">
+            <button
+                class="flex items-center justify-center p-2 hover:opacity-80 active:opacity-70 transition-opacity text-blue-800 dark:text-blue-400">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </button>
+            <h1 class="text-xl font-black text-primary dark:text-blue-100 font-headline tracking-tight">Akwaba</h1>
+        </div>
+        <div class="flex items-center gap-4 text-blue-800 dark:text-blue-400">
+            <span class="material-symbols-outlined text-3xl">notifications</span>
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-fixed">
+                <img class="w-full h-full object-cover"
+                    data-alt="portrait of a dignified senior woman with a warm smile and grey hair in soft natural lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs8B5llBv0OySEgBvxBLml9kxF0Doazv9Yxov_VW9mVvmLYEk99gICkld0HNZE-rrV0nIXOxKEpvNcoPOkhDyDkrWxyI4nHH2Be0ybYSGePd7IbAP6sk-ye_3G6saXCCu1wzzogZt-S2xVATF6DdhMCv4ciRTDcuZctVCg3cAXAFctSPU3F159Tzic3xU2r0pWu3q48VPWlbobCX7kb0WFUTih3dLSCd7P-sEOOGoKZi9QQUVyCGpqGiimZ7NGS17pTPmGxK9n26U" />
+            </div>
+        </div>
+    </header>
+    <main class="px-6 pt-8">
+        <!-- Hero Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl leading-tight font-black text-on-surface mb-3 tracking-tight">Nos Partenaires
+            </h2>
+            <p class="text-on-surface-variant text-base max-w-2xl">Retrouvez les services de confiance sélectionnés pour
+                votre bien-être et votre sécurité au quotidien.</p>
+        </section>
+        <!-- Category Filters -->
+        <section class="mb-12 overflow-x-auto pb-4 -mx-6 px-6">
+            <div class="flex gap-4">
+                <button
+                    class="flex-none bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    Tous
+                </button>
+                <button
+                    class="flex-none bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
+                    <span class="material-symbols-outlined">medical_services</span>
+                    Santé
+                </button>
+                <button
+                    class="flex-none bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
+                    <span class="material-symbols-outlined">local_pharmacy</span>
+                    Pharmacie
+                </button>
+                <button
+                    class="flex-none bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
+                    <span class="material-symbols-outlined">diversity_3</span>
+                    Clubs &amp; Loisirs
+                </button>
+            </div>
+        </section>
+        <!-- Partner Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Partner Card 1 -->
+            <div
+                class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_-4px_40px_rgba(0,86,159,0.06)] flex flex-col gap-6">
+                <div class="flex gap-6">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                            data-alt="modern clinical interior with professional equipment and soft welcoming lighting in a medical center"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiYxDXQaTFd1Z_rVaOpMDb2xIWL-beEnxUQ3tlzxls5mT2zhMAkypS0cfVuLI7vK2TYLM0nK11qLy13Wff4utu6P7jEbLC26UWycjgMGf7hl_GHptUO5x_qRZG1VvZrrJY_Onxi4Efs-h2OjziZlz3n6xI2Q3Kt8mxUORN2UJcoqVGFG9pjtnfLW8yhbmhgAc713Z4LA2_Deh3EJ1fWiehMnNgv0cqaKWv3Ov45sakacVvU2batifPY2zGJz533TskwGM0HYE6R2s" />
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-1">Clinique</span>
+                        <h3 class="text-xl font-bold text-on-surface">Centre de Santé Saint-Luc</h3>
+                        <p class="text-sm text-on-surface-variant flex items-center gap-2 mt-1">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            Plateau, Avenue 15
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-sm text-on-surface-variant">Disponibilité</span>
+                        <span class="font-bold text-secondary">Aujourd'hui, 14:00</span>
+                    </div>
+                    <div class="flex -space-x-3">
+                        <div class="w-10 h-10 rounded-full border-4 border-surface-container-low overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="professional doctor with glasses and medical attire in a bright office environment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcplEsNB4IRxJR6wYRK_o2UejyNCWtKEQtDQBcBdYPX0Mkg_ELU83NiGU-TQ33c_pc_xNodHfDj520TfXe4lpVsOaOYLjH46O9eg_nkHCobPlBz3QahbdMsobpO2-FXKsyCpfxlLryC_3f0dXhmuoqFTAzmnVfpV25lm5xs5naoj4wzE6rN8FZpHbaI_wyNLp4Wq5HmJIt8mb1u-LLP-RFsGNdIdQqUkpz0FU3Gyeqg6JRHJqB3eJin281dOiypCCGGqLNDWOOPQ0" />
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full border-4 border-surface-container-low bg-primary-fixed flex items-center justify-center text-xs font-bold text-on-primary-fixed">
+                            +2
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="bg-primary text-on-primary h-14 rounded-full font-bold text-sm flex items-center justify-center gap-2 w-full hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined">event_available</span>
+                    Prendre rendez-vous
+                </button>
+            </div>
+            <!-- Partner Card 2 -->
+            <div
+                class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_-4px_40px_rgba(0,86,159,0.06)] flex flex-col gap-6">
+                <div class="flex gap-6">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                            data-alt="organized pharmacy shelves with wooden accents and warm lighting creating a trustworthy atmosphere"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtjwdQSEEJFbwsyVue5I0KeMVRTDVyxRtRQDPsA3qC3xLSMUKiBofewtsrvzlpf7y0mcrKTyjFJj7jq-MFWPyTupH50CH-rapGU4fQMAhsmUYS7UKnSEJIfus1NsYqzn_a52jlFsEPGGXu0-F-9FId9be_IfbBp5Xs-AiDjksYwUVGo8Q1-HBu4lozpag7jJr1wndVKQvfYHsSHerWY6LhaQ0CEoxEF8I9metxekzwyEQKg9DN8OiV5nXfdBjUW2-n-VFV3A65oAg" />
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-1">Pharmacie</span>
+                        <h3 class="text-xl font-bold text-on-surface">Grande Pharmacie du Parc</h3>
+                        <p class="text-sm text-on-surface-variant flex items-center gap-2 mt-1">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            Cocody, Rue des Jardins
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-sm text-on-surface-variant">Livraison à domicile</span>
+                        <span class="font-bold text-secondary">Disponible 24h/24</span>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary text-2xl">local_shipping</span>
+                </div>
+                <button
+                    class="bg-primary text-on-primary h-14 rounded-full font-bold text-sm flex items-center justify-center gap-2 w-full hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    Commander
+                </button>
+            </div>
+            <!-- Partner Card 3 -->
+            <div
+                class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_-4px_40px_rgba(0,86,159,0.06)] flex flex-col gap-6">
+                <div class="flex gap-6">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                            data-alt="vibrant community center garden with seniors walking and enjoying a sunny afternoon"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsafOpzpbCLo_zufbh0-i2m1XPTECOe4jZwcZniK6zuuXq7IYqdEBASqkDCX3I_2uRxo5UAIa9PimjcaFcXxGXc2fUwi9fQt2XEJjEyKZQioCSPG0oFVzu-wl3JY1dex0bD7AYFbls66YLLv3zji2H7vkmn8uWsiYs9x9g3Xjd7hbDv4WKfhKvogl2YdB5bTi_S4HQTS1odeQdZsaZaWYOIPPvvW5OdBZRTz6YjG1nk9t2zUQozCzVmmkP9Pa5q1jhBT05Z-sFCMM" />
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-1">Loisirs</span>
+                        <h3 class="text-xl font-bold text-on-surface">Club les Seniors Actifs</h3>
+                        <p class="text-sm text-on-surface-variant flex items-center gap-2 mt-1">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            Marcory Zone 4
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-sm text-on-surface-variant">Prochaine activité</span>
+                        <span class="font-bold text-secondary">Yoga Doux - Demain 10:00</span>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary text-2xl">fitness_center</span>
+                </div>
+                <button
+                    class="bg-primary text-on-primary h-14 rounded-full font-bold text-sm flex items-center justify-center gap-2 w-full hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    S'inscrire
+                </button>
+            </div>
+            <!-- Partner Card 4 -->
+            <div
+                class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_-4px_40px_rgba(0,86,159,0.06)] flex flex-col gap-6">
+                <div class="flex gap-6">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                            data-alt="close up of a professional healthcare specialist holding a patient's hand with care in a bright medical setting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY-3KrERIgVi0gbQfiaJfRZkfe2vHhqVlWZqLUwBwOvemSHqyjUuMwx2C1G9r3zCjvJ94eYE3JH6Fb_uSHFf9uWDUekZTcX-GQ26o9FLr-iktIkmei72BEN18Kgt8QkvplKTxqtLPUJWWkZR6GinyBtE7UlXtW2BDIozc4WFFEAroQ8J276vmg0RT0xOSYvMlkIXBu5jt2j808L1CMZr9hd3ukwaolTEYKu8qX0SXMk_sSCtwbFDHHls0A-kOecd_vb-nleS3DmT0" />
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-1">Spécialiste</span>
+                        <h3 class="text-xl font-bold text-on-surface">Cabinet Kiné-Bien-Être</h3>
+                        <p class="text-sm text-on-surface-variant flex items-center gap-2 mt-1">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            Riviera Palmeraie
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-sm text-on-surface-variant">Type de soin</span>
+                        <span class="font-bold text-secondary">Rééducation &amp; Massage</span>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary text-2xl">self_improvement</span>
+                </div>
+                <button
+                    class="bg-primary text-on-primary h-14 rounded-full font-bold text-sm flex items-center justify-center gap-2 w-full hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined">event_available</span>
+                    Prendre rendez-vous
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- SOS FAB -->
+    <button
+        class="fixed bottom-32 right-6 w-20 h-20 bg-tertiary text-on-tertiary rounded-full shadow-2xl flex flex-col items-center justify-center z-40 active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+        <span class="text-[10px] font-black uppercase tracking-widest">SOS</span>
+    </button>
+    <!-- Bottom Navigation Bar based on {{DATA:COMPONENTS:COMPONENTS_60}} -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-6 pt-2 px-4 bg-white dark:bg-slate-950 rounded-t-[32px] shadow-[0_-4px_40px_rgba(0,86,159,0.06)]">
+        <!-- Accueil -->
+        <a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">home</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">Accueil</span>
+        </a>
+        <!-- Carte -->
+        <a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">map</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">Carte</span>
+        </a>
+        <!-- Ajouter (Floating / Elevated center button) -->
+        <div class="relative pb-2">
+            <button
+                class="flex items-center justify-center w-16 h-16 bg-blue-800 text-white rounded-full shadow-lg -translate-y-4 scale-95 active:scale-90 transition-transform duration-200">
+                <span class="material-symbols-outlined text-3xl">add</span>
+            </button>
+            <span
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 font-lexend text-[11px] font-medium tracking-wide text-slate-500 dark:text-slate-400">Ajouter</span>
+        </div>
+        <!-- SOS (Active State) -->
+        <a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full px-4 py-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">SOS</span>
+        </a>
+        <!-- Profil -->
+        <a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">person</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">Profil</span>
+        </a>
+    </nav>
+</body>
+
+</html>

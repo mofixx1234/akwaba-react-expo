@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "primary-fixed": "#d4e3ff",
+                        "on-surface-variant": "#40493d",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed-variant": "#004786",
+                        "outline-variant": "#bfcaba",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#006eca",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffdbcf",
+                        "inverse-on-surface": "#f1f1f1",
+                        "secondary-fixed": "#9df898",
+                        "secondary": "#106d20",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#001c3a",
+                        "tertiary-container": "#c24300",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-fixed": "#002204",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-secondary-fixed-variant": "#005312",
+                        "inverse-primary": "#a5c8ff",
+                        "secondary-fixed-dim": "#82db7e",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#1a7425",
+                        "on-primary-container": "#ecf1ff",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#707a6c",
+                        "surface-tint": "#005faf",
+                        "on-background": "#1a1c1c",
+                        "primary": "#00569f",
+                        "on-tertiary-container": "#ffeee8",
+                        "secondary-container": "#9df898",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#993300",
+                        "primary-fixed-dim": "#a5c8ff",
+                        "emergency-red": "#E63946",
+                        "emergency-orange": "#F3722C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+    <!-- TopAppBar -->
+    <header class="bg-surface dark:bg-stone-950 flex items-center justify-between px-6 w-full h-20 pt-4">
+        <button class="flex items-center justify-center p-2 active:opacity-70 transition-opacity">
+            <span class="material-symbols-outlined text-primary text-2xl">arrow_back</span>
+        </button>
+        <h1 class="text-xl font-black text-primary dark:text-blue-100 font-headline tracking-tight">Akwaba</h1>
+        <div class="w-10"></div> <!-- Spacer for balance -->
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow flex flex-col items-center px-6 pt-4 pb-32 space-y-12">
+        <!-- Header Text -->
+        <div class="text-center max-w-sm">
+            <h2 class="text-5xl font-black text-on-surface mb-3 tracking-tight">SOS</h2>
+            <p class="text-xl font-medium text-on-surface-variant leading-snug">Voulez-vous appeler les secours ?</p>
+        </div>
+        <!-- Main SOS Button -->
+        <div class="relative flex items-center justify-center">
+            <!-- Pulsing decorative ring -->
+            <div class="absolute w-44 h-44 rounded-full bg-emergency-red/10 animate-pulse"></div>
+            <!-- Redesigned SOS Button: Circular, max 140px diameter -->
+            <button
+                class="relative z-10 w-[140px] h-[140px] rounded-full bg-emergency-red text-white flex flex-col items-center justify-center shadow-[0_15px_40px_rgba(230,57,70,0.45)] active:scale-90 transition-transform duration-150">
+                <span class="material-symbols-outlined text-5xl mb-1"
+                    style="font-variation-settings: 'FILL' 1;">emergency</span>
+                <span class="text-2xl font-black uppercase tracking-wider">SOS</span>
+            </button>
+        </div>
+        <!-- Action & Info Section -->
+        <div class="w-full max-w-sm space-y-4">
+            <!-- Secondary Emergency Action -->
+            <button
+                class="w-full h-20 bg-secondary-container text-on-secondary-container rounded-2xl flex items-center justify-center space-x-4 active:bg-secondary-fixed transition-colors shadow-sm">
+                <span class="material-symbols-outlined text-3xl">contact_phone</span>
+                <span class="text-lg font-bold">Appeler contact d'urgence</span>
+            </button>
+            <!-- Refined Location Insight Card -->
+            <div
+                class="bg-surface-container-low rounded-2xl p-5 flex items-center space-x-4 border border-outline-variant/30">
+                <div class="bg-primary-container/10 p-3 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-2xl"
+                        style="font-variation-settings: 'FILL' 1;">location_on</span>
+                </div>
+                <div>
+                    <p class="text-on-surface-variant text-sm font-medium">Votre position actuelle :</p>
+                    <p class="text-lg font-bold text-on-surface">Abidjan, Cocody</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar based on {{DATA:COMPONENTS:COMPONENTS_60}} -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-6 pt-2 px-4 bg-white dark:bg-slate-950 rounded-t-[32px] shadow-[0_-4px_40px_rgba(0,86,159,0.06)]">
+        <!-- Accueil -->
+        <a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">home</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">Accueil</span>
+        </a>
+        <!-- Carte -->
+        <a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">map</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">Carte</span>
+        </a>
+        <!-- Ajouter (Floating / Elevated center button) -->
+        <div class="relative pb-2">
+            <button
+                class="flex items-center justify-center w-16 h-16 bg-blue-800 text-white rounded-full shadow-lg -translate-y-4 scale-95 active:scale-90 transition-transform duration-200">
+                <span class="material-symbols-outlined text-3xl">add</span>
+            </button>
+            <span
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 font-lexend text-[11px] font-medium tracking-wide text-slate-500 dark:text-slate-400">Ajouter</span>
+        </div>
+        <!-- SOS (Active State) -->
+        <a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full px-4 py-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">SOS</span>
+        </a>
+        <!-- Profil -->
+        <a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 scale-95 active:scale-90 transition-transform duration-200"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">person</span>
+            <span class="font-lexend text-[11px] font-medium tracking-wide">Profil</span>
+        </a>
+    </nav>
+</body>
+
+</html>

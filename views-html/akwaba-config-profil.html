@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Akwaba Senior - Inscription</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001c3a",
+                        "secondary-fixed": "#9df898",
+                        "background": "#f9f9f9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "primary-fixed": "#d4e3ff",
+                        "primary": "#00569f",
+                        "tertiary-container": "#c24300",
+                        "error-container": "#ffdad6",
+                        "secondary": "#106d20",
+                        "secondary-fixed-dim": "#82db7e",
+                        "outline-variant": "#bfcaba",
+                        "tertiary": "#993300",
+                        "surface-container": "#eeeeee",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-container": "#ffeee8",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed": "#002204",
+                        "inverse-primary": "#a5c8ff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#9df898",
+                        "on-surface-variant": "#40493d",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "outline": "#707a6c",
+                        "on-secondary-container": "#1a7425",
+                        "primary-fixed-dim": "#a5c8ff",
+                        "on-primary-fixed-variant": "#004786",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#005faf",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#006eca",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-container": "#ecf1ff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-tertiary-fixed": "#380d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .canvas-shadow {
+            box-shadow: 0 8px 40px rgba(0, 86, 159, 0.06);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center">
+    <!-- TopAppBar Suppressed for Transactional Flow (Login/Sign-up rule) -->
+    <main class="w-full max-w-md px-6 pt-12 pb-24 flex flex-col items-center flex-grow">
+        <!-- Progress Indicator -->
+        <div class="w-full flex justify-center gap-2 mb-10">
+            <div class="h-1.5 w-16 bg-primary-container rounded-full opacity-30"></div>
+            <div class="h-1.5 w-16 bg-primary rounded-full"></div>
+        </div>
+        <!-- Header Section -->
+        <div class="text-center mb-10">
+            <h1 class="text-[2.25rem] font-bold leading-tight text-on-surface tracking-tight mb-4">
+                Votre Photo de Profil
+            </h1>
+            <p class="text-[1.125rem] text-on-surface-variant font-medium leading-relaxed px-4">
+                Étape 2 sur 2 : Ajoutez une photo pour que l'on puisse vous reconnaître.
+            </p>
+        </div>
+        <!-- Avatar Selection Bento Grid / Focal Point -->
+        <div class="relative group cursor-pointer mb-12">
+            <div
+                class="w-64 h-64 bg-surface-container rounded-full flex items-center justify-center border-4 border-surface-container-lowest canvas-shadow overflow-hidden transition-transform active:scale-95 duration-200">
+                <div class="flex flex-col items-center">
+                    <span class="material-symbols-outlined text-[5rem] text-primary-container mb-2"
+                        data-icon="add_a_photo">add_a_photo</span>
+                    <span class="text-primary font-semibold text-lg">Ajouter</span>
+                </div>
+                <!-- Background Image Placeholder for visual context -->
+                <img alt="" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10"
+                    data-alt="warm and bright studio lighting on a soft minimalist background, neutral tones, high-end photography style"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrbrLf-CMbx8UpukWQMPJXupfx3vZUK5fvzh5j9gwDlXm-x-7pz9Lao631b7eaSt9I6DWYF_W0giJMH1HaqHnfJtYFWPRnTYVt8c-pccwVDnlmti_VWKzIHl7pz_gekX2J3RMzcEj8KRHzSL0Qv3Tjz97r0AUB_2FUMVyJnxlwFAhFHokCDwEuo3-xtv6CNzdn3E1wrIfbwIP9J2tGQDYlk5BBIAw_gkur8so373P7UxaFdoS_3I0pQWj8t66cUgwBp8FMwRazzpY" />
+            </div>
+            <!-- Action Button Overlay for Touch Target -->
+            <div
+                class="absolute bottom-2 right-2 bg-primary w-16 h-16 rounded-full flex items-center justify-center border-4 border-surface-container-lowest shadow-lg">
+                <span class="material-symbols-outlined text-white text-3xl" data-icon="photo_camera"
+                    style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+            </div>
+        </div>
+        <!-- Content Card: Reassurance -->
+        <div class="w-full bg-surface-container-low p-6 rounded-lg mb-12 flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified_user"
+                style="font-variation-settings: 'FILL' 1;">verified_user</span>
+            <p class="text-on-surface-variant text-base font-medium leading-normal">
+                Cette photo ne sera visible que par vous et vos contacts d'urgence.
+            </p>
+        </div>
+        <!-- Sticky Bottom Action Area -->
+        <div class="w-full mt-auto space-y-4">
+            <!-- Primary Action -->
+            <button
+                class="w-full bg-primary text-on-primary h-[4.5rem] rounded-full text-xl font-bold flex items-center justify-center shadow-lg active:scale-[0.98] transition-all">
+                Finaliser l'inscription
+                <span class="material-symbols-outlined ml-3" data-icon="check_circle">check_circle</span>
+            </button>
+            <!-- Secondary Action -->
+            <button
+                class="w-full bg-surface-container-high text-on-surface h-[4.5rem] rounded-full text-xl font-semibold flex items-center justify-center active:scale-[0.98] transition-all">
+                <span class="material-symbols-outlined mr-3" data-icon="arrow_back">arrow_back</span>
+                Retour
+            </button>
+        </div>
+    </main>
+    <!-- FAB Suppressed for Transactional/Focused Screen (Contextual FAB Suppression Rule) -->
+    <!-- BottomNavBar Suppressed for Transactional Flow (Automatic Suppression Rule) -->
+</body>
+
+</html>

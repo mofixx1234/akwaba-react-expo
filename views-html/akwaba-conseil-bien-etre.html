@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akwaba - Conseils &amp; bien-être</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#f9f9f9",
+                        "on-surface-variant": "#40493d",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        primary: "#00569f",
+                        secondary: "#106d20",
+                        "on-secondary-container": "#1a7425",
+                        "secondary-container": "#9df898",
+                        outline: "#707a6c",
+                        tertiary: "#993300",
+                        "on-tertiary": "#ffffff",
+                    },
+                    fontFamily: {
+                        body: ["Lexend", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: Lexend, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+
+        .icon-filled {
+            font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-background pb-36 text-on-surface antialiased">
+    <header
+        class="sticky top-0 z-40 flex h-16 w-full items-center justify-between border-b border-stone-200/80 bg-surface-container-lowest/95 px-4 backdrop-blur dark:border-stone-800">
+        <button type="button"
+            class="flex h-10 w-10 items-center justify-center rounded-full transition-colors active:bg-surface-container-high"
+            aria-label="Retour">
+            <span class="material-symbols-outlined text-2xl text-primary">arrow_back</span>
+        </button>
+        <h1 class="font-body text-lg font-bold text-primary">Conseils &amp; bien-être</h1>
+        <div class="w-10" aria-hidden="true"></div>
+    </header>
+    <main class="mx-auto max-w-2xl space-y-6 px-4 pt-6">
+        <!-- Intro avec image -->
+        <section class="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
+            <div class="relative aspect-[2/1] w-full sm:aspect-[2.4/1]">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80"
+                    alt="Personne en posture détente, bien-être et calme" class="h-full w-full object-cover"
+                    width="1200" height="500" fetchpriority="high" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+                    <div
+                        class="mb-2 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-secondary shadow-sm backdrop-blur">
+                        <span class="material-symbols-outlined text-lg icon-filled">spa</span>
+                        <span class="text-xs font-bold">Akwaba bien-être</span>
+                    </div>
+                    <h2 class="font-body text-2xl font-black tracking-tight text-white sm:text-3xl">Prenez soin de vous
+                    </h2>
+                    <p class="mt-2 max-w-xl text-sm font-medium leading-relaxed text-white/90">
+                        Des idées simples, illustrées, pour rester en forme et garder le moral au quotidien.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Filtres thématiques + mini visuels -->
+        <section class="space-y-3" aria-label="Thématiques">
+            <p class="px-1 text-sm font-bold uppercase tracking-wider text-on-surface-variant">Thèmes</p>
+            <div
+                class="flex gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <figure class="shrink-0 w-[88px] text-center">
+                    <div class="overflow-hidden rounded-2xl ring-2 ring-primary ring-offset-2 ring-offset-background">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=200&q=80"
+                            alt="" class="aspect-square w-full object-cover" width="200" height="200" />
+                    </div>
+                    <figcaption class="mt-1.5 text-[11px] font-bold text-primary">Tous</figcaption>
+                </figure>
+                <figure class="shrink-0 w-[88px] text-center">
+                    <div class="overflow-hidden rounded-2xl ring-1 ring-black/10">
+                        <img src="https://images.unsplash.com/photo-1631049307264-0bf569011a23?auto=format&fit=crop&w=200&q=80"
+                            alt="" class="aspect-square w-full object-cover" width="200" height="200" loading="lazy" />
+                    </div>
+                    <figcaption class="mt-1.5 text-[11px] font-semibold text-on-surface-variant">Sommeil</figcaption>
+                </figure>
+                <figure class="shrink-0 w-[88px] text-center">
+                    <div class="overflow-hidden rounded-2xl ring-1 ring-black/10">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=200&q=80"
+                            alt="" class="aspect-square w-full object-cover" width="200" height="200" loading="lazy" />
+                    </div>
+                    <figcaption class="mt-1.5 text-[11px] font-semibold text-on-surface-variant">Repas</figcaption>
+                </figure>
+                <figure class="shrink-0 w-[88px] text-center">
+                    <div class="overflow-hidden rounded-2xl ring-1 ring-black/10">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=200&q=80"
+                            alt="" class="aspect-square w-full object-cover" width="200" height="200" loading="lazy" />
+                    </div>
+                    <figcaption class="mt-1.5 text-[11px] font-semibold text-on-surface-variant">Marche</figcaption>
+                </figure>
+                <figure class="shrink-0 w-[88px] text-center">
+                    <div class="overflow-hidden rounded-2xl ring-1 ring-black/10">
+                        <img src="https://images.unsplash.com/photo-1529154333708-cb75ce165fad?auto=format&fit=crop&w=200&q=80"
+                            alt="" class="aspect-square w-full object-cover" width="200" height="200" loading="lazy" />
+                    </div>
+                    <figcaption class="mt-1.5 text-[11px] font-semibold text-on-surface-variant">Amitié</figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- Conseils avec images -->
+        <section class="space-y-5" aria-labelledby="conseils-title">
+            <h2 id="conseils-title" class="px-1 text-sm font-bold uppercase tracking-wider text-on-surface-variant">À
+                lire aujourd’hui</h2>
+            <article class="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
+                <div class="relative aspect-[16/10] w-full">
+                    <img src="https://images.unsplash.com/photo-1631049307264-0bf569011a23?auto=format&fit=crop&w=900&q=80"
+                        alt="Chambre calme et lumineuse pour un bon sommeil" class="h-full w-full object-cover"
+                        width="900" height="563" loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
+                    <div
+                        class="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-primary shadow-sm backdrop-blur">
+                        <span class="material-symbols-outlined text-lg">bedtime</span>
+                        <span class="text-xs font-bold uppercase tracking-wide">Sommeil</span>
+                    </div>
+                </div>
+                <div class="space-y-2 p-4">
+                    <h3 class="text-lg font-bold">Des nuits plus reposantes</h3>
+                    <p class="text-sm leading-relaxed text-on-surface-variant">
+                        Couchez-vous et levez-vous à des heures régulières. Évitez les écrans une heure avant de dormir
+                        et gardez la chambre fraîche et calme.
+                    </p>
+                </div>
+            </article>
+            <article class="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
+                <div class="relative aspect-[16/10] w-full">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+                        alt="Assiette colorée avec légumes et aliments équilibrés" class="h-full w-full object-cover"
+                        width="900" height="563" loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
+                    <div
+                        class="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-on-secondary-container shadow-sm backdrop-blur">
+                        <span class="material-symbols-outlined text-lg">restaurant</span>
+                        <span class="text-xs font-bold uppercase tracking-wide">Alimentation</span>
+                    </div>
+                </div>
+                <div class="space-y-2 p-4">
+                    <h3 class="text-lg font-bold">Manger équilibré, simplement</h3>
+                    <p class="text-sm leading-relaxed text-on-surface-variant">
+                        Privilégiez fruits, légumes, protéines et céréales complètes. Buvez suffisamment d’eau dans la
+                        journée. En cas de traitement, demandez l’avis de votre médecin avant tout changement.
+                    </p>
+                </div>
+            </article>
+            <article class="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
+                <div class="relative aspect-[16/10] w-full">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80"
+                        alt="Personnes marchant en plein air pour rester actives" class="h-full w-full object-cover"
+                        width="900" height="563" loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
+                    <div
+                        class="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-primary shadow-sm backdrop-blur">
+                        <span class="material-symbols-outlined text-lg">directions_walk</span>
+                        <span class="text-xs font-bold uppercase tracking-wide">Mouvement</span>
+                    </div>
+                </div>
+                <div class="space-y-2 p-4">
+                    <h3 class="text-lg font-bold">Bouger un peu, souvent</h3>
+                    <p class="text-sm leading-relaxed text-on-surface-variant">
+                        Une marche courte après chaque repas, des étirements doux ou du jardinage : l’important est la
+                        régularité. Adaptez l’effort à votre forme et faites des pauses si vous êtes essoufflé.
+                    </p>
+                </div>
+            </article>
+            <article class="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
+                <div class="relative aspect-[16/10] w-full">
+                    <img src="https://images.unsplash.com/photo-1529154333708-cb75ce165fad?auto=format&fit=crop&w=900&q=80"
+                        alt="Groupe de personnes souriant ensemble" class="h-full w-full object-cover" width="900"
+                        height="563" loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
+                    <div
+                        class="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-on-secondary-container shadow-sm backdrop-blur">
+                        <span class="material-symbols-outlined text-lg">groups</span>
+                        <span class="text-xs font-bold uppercase tracking-wide">Social</span>
+                    </div>
+                </div>
+                <div class="space-y-2 p-4">
+                    <h3 class="text-lg font-bold">Rester connecté</h3>
+                    <p class="text-sm leading-relaxed text-on-surface-variant">
+                        Appelez un proche, participez à une activité de quartier ou rejoignez un groupe Akwaba. Les
+                        liens sociaux protègent le moral et la mémoire.
+                    </p>
+                </div>
+            </article>
+            <article class="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
+                <div class="relative aspect-[16/10] w-full">
+                    <img src="https://images.unsplash.com/photo-1559837174-94dd104a0b3d?auto=format&fit=crop&w=900&q=80"
+                        alt="Verre d’eau fraîche pour une bonne hydratation" class="h-full w-full object-cover"
+                        width="900" height="563" loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
+                    <div
+                        class="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-primary shadow-sm backdrop-blur">
+                        <span class="material-symbols-outlined text-lg">water_drop</span>
+                        <span class="text-xs font-bold uppercase tracking-wide">Hydratation</span>
+                    </div>
+                </div>
+                <div class="space-y-2 p-4">
+                    <h3 class="text-lg font-bold">S’hydrater sans attendre la soif</h3>
+                    <p class="text-sm leading-relaxed text-on-surface-variant">
+                        Gardez une bouteille à portée de main. En cas de chaleur ou de traitement diurétique, demandez à
+                        votre médecin la quantité adaptée pour vous.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <!-- Encart urgence avec visuel discret -->
+        <aside class="overflow-hidden rounded-3xl border border-tertiary/25 bg-tertiary/10 shadow-sm" role="note">
+            <div class="grid sm:grid-cols-[minmax(0,1fr)_140px]">
+                <div class="flex gap-3 p-4">
+                    <span class="material-symbols-outlined shrink-0 text-tertiary icon-filled text-3xl">emergency</span>
+                    <p class="text-sm leading-relaxed text-on-surface">
+                        <span class="font-bold text-tertiary">Urgence médicale ?</span>
+                        Appelez les services adaptés ou utilisez le bouton <strong>SOS</strong> de l’application. Ces
+                        conseils ne remplacent pas un avis médical.
+                    </p>
+                </div>
+                <div class="relative hidden min-h-[100px] sm:block">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400&q=80"
+                        alt="" class="absolute inset-0 h-full w-full object-cover opacity-90" width="400" height="300"
+                        loading="lazy" />
+                </div>
+            </div>
+        </aside>
+    </main>
+    <nav class="fixed bottom-0 left-0 z-50 w-full rounded-t-[3rem] bg-stone-50 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-4px_40px_rgba(0,86,159,0.06)] dark:bg-stone-950"
+        aria-label="Navigation principale">
+        <div class="mx-auto grid max-w-md grid-cols-5 items-end gap-1 px-2">
+            <a class="flex flex-col items-center justify-center rounded-full bg-blue-100 px-1 py-2 text-blue-900 transition active:scale-95 dark:bg-blue-900 dark:text-blue-50"
+                href="#" aria-current="page">
+                <span class="material-symbols-outlined text-2xl icon-filled">home</span>
+                <span class="text-[11px] font-bold leading-none">Accueil</span>
+            </a>
+            <a class="flex flex-col items-center justify-center rounded-2xl px-1 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+                href="#">
+                <span class="material-symbols-outlined text-2xl">map</span>
+                <span class="text-[11px] font-bold leading-none">Carte</span>
+            </a>
+            <div class="flex justify-center pb-1">
+                <button type="button"
+                    class="flex h-14 w-14 -translate-y-3 items-center justify-center rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 transition active:scale-95"
+                    aria-label="Ajouter">
+                    <span class="material-symbols-outlined text-3xl icon-filled">add</span>
+                </button>
+            </div>
+            <a class="flex flex-col items-center justify-center rounded-2xl px-1 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+                href="#">
+                <span class="material-symbols-outlined text-2xl">emergency</span>
+                <span class="text-[11px] font-bold leading-none">SOS</span>
+            </a>
+            <a class="flex flex-col items-center justify-center rounded-2xl px-1 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+                href="#">
+                <span class="material-symbols-outlined text-2xl">person</span>
+                <span class="text-[11px] font-bold leading-none">Profil</span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>

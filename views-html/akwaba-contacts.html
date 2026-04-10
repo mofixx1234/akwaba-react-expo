@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Akwaba - Urgences</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#f9f9f9",
+                        "primary-fixed": "#d4e3ff",
+                        "on-surface-variant": "#40493d",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed-variant": "#004786",
+                        "outline-variant": "#bfcaba",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#006eca",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffdbcf",
+                        "inverse-on-surface": "#f1f1f1",
+                        "secondary-fixed": "#9df898",
+                        secondary: "#106d20",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#001c3a",
+                        "tertiary-container": "#c24300",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-fixed": "#002204",
+                        "surface-bright": "#f9f9f9",
+                        surface: "#f9f9f9",
+                        error: "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-secondary-fixed-variant": "#005312",
+                        "inverse-primary": "#a5c8ff",
+                        "secondary-fixed-dim": "#82db7e",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#1a7425",
+                        "on-primary-container": "#ecf1ff",
+                        "surface-container-high": "#e8e8e8",
+                        outline: "#707a6c",
+                        "surface-tint": "#005faf",
+                        "on-background": "#1a1c1c",
+                        primary: "#00569f",
+                        "on-tertiary-container": "#ffeee8",
+                        "secondary-container": "#9df898",
+                        "surface-container-lowest": "#ffffff",
+                        tertiary: "#993300",
+                        "primary-fixed-dim": "#a5c8ff",
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "2rem",
+                        xl: "3rem",
+                        full: "9999px",
+                    },
+                    fontFamily: {
+                        headline: ["Lexend", "sans-serif"],
+                        body: ["Lexend", "sans-serif"],
+                        label: ["Lexend", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: Lexend, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+
+        .icon-filled {
+            font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen pb-36">
+    <header
+        class="sticky top-0 z-40 flex h-20 w-full items-center justify-between border-b border-stone-200/80 bg-stone-50 px-5 dark:border-stone-800 dark:bg-stone-950">
+        <div class="flex min-w-0 flex-1 items-center gap-3">
+            <button aria-label="Retour"
+                class="flex shrink-0 items-center justify-center rounded-full p-2 transition-opacity hover:opacity-80 active:opacity-70"
+                type="button">
+                <span class="material-symbols-outlined text-2xl text-blue-800 dark:text-blue-400">arrow_back</span>
+            </button>
+            <h1 class="truncate font-body text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100">Urgences
+            </h1>
+        </div>
+        <span class="shrink-0 font-headline text-lg font-black text-blue-900 dark:text-blue-100">Akwaba</span>
+    </header>
+    <main class="mx-auto max-w-2xl px-5 pb-8 pt-6">
+        <section aria-labelledby="proches-title" class="mb-8">
+            <h2 class="mb-3 font-headline text-4xl font-black leading-tight text-on-surface sm:text-5xl"
+                id="proches-title">
+                Vos proches
+            </h2>
+            <p class="text-lg leading-relaxed text-on-surface-variant">
+                Contactez rapidement vos personnes de confiance en cas de besoin.
+            </p>
+        </section>
+        <ul class="space-y-4" role="list">
+            <li>
+                <article
+                    class="flex items-center justify-between gap-4 rounded-xl bg-surface-container-lowest p-5 shadow-[0_-4px_40px_rgba(0,86,159,0.06)]">
+                    <div class="flex min-w-0 flex-1 items-center gap-4">
+                        <div class="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-surface-container-high">
+                            <img alt="Photo de Marie Dubois" class="h-full w-full object-cover" height="64"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8PS1UfG7v_lRHauIUgybPyycRRBK16waa2dqLlGF0yRJN80dQIL0C2SJdWRZ5yqchPzaamkPum_wfK-zDZjyZHLIcvQK7J_uO3wkgF7lD3lHSyLDtI_OQfIDVTHVlb1pjmIudk1DMLrq8NulxYUXWtGH5ikJN2Ads1_mnUw9A-PSN7YRnxw_4iuqIp7B4mVmWgBCv9FiORijNwBa3AGUC_E9t_MCcRJH9l5zrQ40krfLbP4pVqtMVt8LDvZPjhHerOZ5kxWHIMYc"
+                                width="64" />
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="truncate text-xl font-bold text-on-surface">Marie Dubois</h3>
+                            <p class="text-base font-medium uppercase tracking-wide text-secondary">Fille</p>
+                        </div>
+                    </div>
+                    <button aria-label="Appeler Marie Dubois"
+                        class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary transition-all hover:opacity-90 active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined icon-filled text-3xl">call</span>
+                    </button>
+                </article>
+            </li>
+            <li>
+                <article
+                    class="flex items-center justify-between gap-4 rounded-xl bg-surface-container-lowest p-5 shadow-[0_-4px_40px_rgba(0,86_159,0.06)]">
+                    <div class="flex min-w-0 flex-1 items-center gap-4">
+                        <div class="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-surface-container-high">
+                            <img alt="Photo de Jean-Pierre" class="h-full w-full object-cover" height="64"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9fciAMfo-mtH4okglFY7zvyYTAM6eakrFbrkshmMnmLtmxrnAc1ope_E70RoeVERespop5VzooX9Mn1SIivn0iITYLffDQ_mJZ7WBRnxDALB1LJ9sPbPSQ4LkiFFMxRbe_lm5PjmLUOJCn_2WKrsoyl1L2tN0HgsH4EY1DG21gICqqujmwNl9W-ARUyma6V459R6Zk1PJnJ_TfDcd_BnsVu_2pj-gu3f9fn4YOAgqK8WEfaHHGDajF8s6hkU9lW8k13YMysCmCg4"
+                                width="64" />
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="truncate text-xl font-bold text-on-surface">Jean-Pierre</h3>
+                            <p class="text-base font-medium uppercase tracking-wide text-secondary">Fils</p>
+                        </div>
+                    </div>
+                    <button aria-label="Appeler Jean-Pierre"
+                        class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary transition-all hover:opacity-90 active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined icon-filled text-3xl">call</span>
+                    </button>
+                </article>
+            </li>
+            <li>
+                <article
+                    class="flex items-center justify-between gap-4 rounded-xl bg-surface-container-lowest p-5 shadow-[0_-4px_40px_rgba(0,86_159,0.06)]">
+                    <div class="flex min-w-0 flex-1 items-center gap-4">
+                        <div class="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-surface-container-high">
+                            <img alt="Photo de Lucie Martin" class="h-full w-full object-cover" height="64"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBad1K6vEcjioUtx93R17Y_h2WP-_C_TZlFxra3iowvLryZPWHOgFjdBRtSYM3b1hOcPG0NOR-6oN98KtwuuA4czPmsj8Q0RqzzNgladX42K42RNGn4_qYSlaMqO7E-cvxsDgymXpExpu_ehGl7BelFZe16rododE7b5lu3HfPyZbPz3C9b5VZmQPAGQxcKfXqgQJJzk-b-6_HtNb-zUiqaGU4aWwL_x-pnyNOtpCJX1IoXqf2C3xlZ5bJXkBcdn9HmAEmq8aV9to8"
+                                width="64" />
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="truncate text-xl font-bold text-on-surface">Lucie Martin</h3>
+                            <p class="text-base font-medium uppercase tracking-wide text-secondary">Petite-fille</p>
+                        </div>
+                    </div>
+                    <button aria-label="Appeler Lucie Martin"
+                        class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary transition-all hover:opacity-90 active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined icon-filled text-3xl">call</span>
+                    </button>
+                </article>
+            </li>
+        </ul>
+        <div class="mt-8">
+            <button
+                class="flex h-20 w-full items-center justify-center gap-3 rounded-xl bg-secondary-container text-on-secondary-container transition-all hover:opacity-90 active:scale-[0.98]"
+                type="button">
+                <span class="material-symbols-outlined text-2xl">person_add</span>
+                <span class="text-xl font-bold">Ajouter un proche</span>
+            </button>
+        </div>
+        <aside aria-labelledby="aide-immediate-title"
+            class="mt-10 flex flex-col gap-3 rounded-xl bg-tertiary-fixed p-6">
+            <div class="flex items-center gap-3 text-on-tertiary-fixed">
+                <span class="material-symbols-outlined icon-filled text-3xl">info</span>
+                <h2 class="text-xl font-bold" id="aide-immediate-title">Aide immédiate</h2>
+            </div>
+            <p class="text-lg text-on-tertiary-fixed-variant">
+                En cas de danger immédiat, utilisez le bouton SOS en bas à droite de l’écran.
+            </p>
+        </aside>
+    </main>
+    <button aria-label="Appel d’urgence SOS"
+        class="fixed bottom-28 right-6 z-[60] flex h-20 w-20 flex-col items-center justify-center rounded-full bg-tertiary text-on-tertiary shadow-2xl transition-transform hover:scale-105 active:scale-90"
+        type="button">
+        <span class="material-symbols-outlined icon-filled text-3xl">emergency</span>
+        <span class="text-sm font-black tracking-widest">SOS</span>
+    </button>
+    <nav aria-label="Navigation principale"
+        class="fixed bottom-0 left-0 z-50 flex w-full items-end justify-around bg-stone-50 px-2 pb-[max(1rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-4px_40px_rgba(0,0,0,0.1)] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
+        <a class="flex flex-col items-center justify-center rounded-2xl px-3 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">home</span>
+            <span class="font-body text-sm font-bold">Accueil</span>
+        </a>
+        <a class="flex flex-col items-center justify-center rounded-2xl px-3 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">map</span>
+            <span class="font-body text-sm font-bold">Carte</span>
+        </a><a class="flex flex-col items-center justify-center gap-1 transition active:scale-95 group" href="#">
+            <div
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-on-primary shadow-lg group-hover:opacity-90">
+                <span class="material-symbols-outlined text-3xl">add</span>
+            </div>
+            <span class="font-body text-sm font-bold text-stone-600 dark:text-stone-400">Ajouter</span>
+        </a>
+        <a class="flex flex-col items-center justify-center rounded-2xl px-3 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">emergency</span>
+            <span class="font-body text-sm font-bold">SOS</span>
+        </a>
+        <a class="flex flex-col items-center justify-center rounded-2xl px-3 py-2 text-stone-600 transition active:scale-95 dark:text-stone-400"
+            href="#">
+            <span class="material-symbols-outlined text-2xl">person</span>
+            <span class="font-body text-sm font-bold">Profil</span>
+        </a>
+    </nav>
+</body>
+
+</html>
