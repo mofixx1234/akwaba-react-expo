@@ -39,7 +39,7 @@ export default function InscriptionScreen() {
   return (
     <SafeAreaView className="flex-1 bg-[#F9F9F9]" edges={['top', 'bottom']}>
       <View className={isSmall ? 'h-16 flex-row items-center justify-between bg-stone-50 px-4 pt-1' : 'h-20 flex-row items-center justify-between bg-stone-50 px-6 pt-3'}>
-        <Pressable className="active:opacity-70" onPress={() => router.back()}>
+        <Pressable className="active:opacity-70" onPress={() => router.replace('/login')}>
           <Ionicons color="#1E3A8A" name="arrow-back" size={isSmall ? 22 : 26} />
         </Pressable>
         <Text className={isSmall ? 'text-xl font-black tracking-tight text-blue-900' : 'text-2xl font-black tracking-tight text-blue-900'}>

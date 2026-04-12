@@ -8,10 +8,7 @@
  *    - react-native-reanimated : Pour activer les animations fluides dans l’app.
  *    - useColorScheme (hook personnalisé) : Pour détecter si le mode clair ou sombre est actif.
  * 
- * 2. Paramètre `unstable_settings` :
- *    Ceci ancre la navigation principale sur le groupe '(tabs)'.
- * 
- * 3. Fonction principale `RootLayout` :
+ * 2. Fonction principale `RootLayout` :
  *    - Récupère le thème (clair/sombre) avec le hook personnalisé.
  *    - Fournit le thème à la navigation via `ThemeProvider` (Permet un look natif pour chaque mode).
  *    - Définit une Stack de navigation, déclarant explicitement les écrans clés de l’application, tous sans header pour un affichage personnalisé.
@@ -29,11 +26,6 @@ import '../global.css';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-// Ce paramètre ancre la navigation principale sur le groupe de tabs.
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
 export default function RootLayout() {
   // Récupère si l'utilisateur préfère un thème sombre ou clair.
   const colorScheme = useColorScheme();
@@ -41,7 +33,7 @@ export default function RootLayout() {
   return (
     // Applique le bon thème à toute l'arborescence de navigation.
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack initialRouteName="login">
+      <Stack>
         {/* Ecran principal (onglets) sans header */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         {/* Ecran de connexion */}
