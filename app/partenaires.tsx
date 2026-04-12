@@ -197,7 +197,9 @@ export default function PartenairesScreen() {
 
       <ScrollView
         className="flex-1"
-        contentContainerStyle={{ paddingBottom: 160 + insets.bottom }}
+        contentContainerStyle={{
+          paddingBottom: Math.max(insets.bottom, 16) + 112,
+        }}
         showsVerticalScrollIndicator={false}>
         <View className="mx-auto w-full max-w-2xl gap-6 px-4 pt-6">
           <View className="overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-sm">
@@ -267,10 +269,15 @@ export default function PartenairesScreen() {
       </ScrollView>
 
       <Pressable
-        className="absolute bottom-32 right-6 z-40 h-20 w-20 items-center justify-center rounded-full bg-[#993300] shadow-2xl active:opacity-90"
+        accessibilityLabel="SOS urgence"
+        className="absolute z-40 h-20 w-20 flex-col items-center justify-center gap-0.5 rounded-full bg-[#993300] shadow-2xl active:opacity-90"
+        style={{
+          bottom: Math.max(insets.bottom, 16) + 20,
+          right: Math.max(insets.right, 24),
+        }}
         onPress={() => router.push('/(tabs)/sos')}>
-        <Ionicons color="#FFFFFF" name="warning" size={32} />
-        <Text className="text-[10px] font-black uppercase tracking-widest text-white">SOS</Text>
+        <Ionicons color="#FFFFFF" name="warning" size={28} />
+        <Text className="text-[11px] font-black uppercase tracking-widest text-white">SOS</Text>
       </Pressable>
     </SafeAreaView>
   );

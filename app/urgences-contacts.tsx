@@ -1,9 +1,13 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
-import { Image, Pressable, ScrollView, Text, View } from 'react-native';
+import { useMemo, useState } from 'react';
+import { FlatList, Image, Linking, Pressable, Text, TextInput, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AkwabaHomeBottomNav, replaceWithHomeTab } from '@/components/home/akwaba-home-bottom-nav';
+
+const BLUE = '#00569F';
+const BLUE_SOFT = '#D4E3FF';
+const BG = '#F4F7FC';
 
 const C1 =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuB8PS1UfG7v_lRHauIUgybPyycRRBK16waa2dqLlGF0yRJN80dQIL0C2SJdWRZ5yqchPzaamkPum_wfK-zDZjyZHLIcvQK7J_uO3wkgF7lD3lHSyLDtI_OQfIDVTHVlb1pjmIudk1DMLrq8NulxYUXWtGH5ikJN2Ads1_mnUw9A-PSN7YRnxw_4iuqIp7B4mVmWgBCv9FiORijNwBa3AGUC_E9t_MCcRJH9l5zrQ40krfLbP4pVqtMVt8LDvZPjhHerOZ5kxWHIMYc';
@@ -12,78 +16,140 @@ const C2 =
 const C3 =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuBad1K6vEcjioUtx93R17Y_h2WP-_C_TZlFxra3iowvLryZPWHOgFjdBRtSYM3b1hOcPG0NOR-6oN98KtwuuA4czPmsj8Q0RqzzNgladX42K42RNGn4_qYSlaMqO7E-cvxsDgymXpExpu_ehGl7BelFZe16rododE7b5lu3HfPyZbPz3C9b5VZmQPAGQxcKfXqgQJJzk-b-6_HtNb-zUiqaGU4aWwL_x-pnyNOtpCJX1IoXqf2C3xlZ5bJXkBcdn9HmAEmq8aV9to8';
 
-function ContactRow({ name, relation, uri }: { name: string; relation: string; uri: string }) {
+type Contact = {
+  id: string;
+  name: string;
+  phone: string;
+  uri: string;
+  tag?: string;
+};
+
+const ALL_CONTACTS: Contact[] = [
+  { id: 'a1', name: 'Amélie Bernard', phone: '+225 07 11 22 33 44', uri: C1 },
+  { id: 'd1', name: 'David Kouassi', phone: '+225 05 88 77 66 55', uri: C2, tag: 'Contact urgence' },
+  { id: 'j1', name: 'Jean-Pierre N’Guessan', phone: '+225 01 44 55 66 77', uri: C2 },
+  { id: 'l1', name: 'Lucie Martin', phone: '+225 07 99 00 11 22', uri: C3, tag: 'Fille' },
+  { id: 'm1', name: 'Marion Nash', phone: '+225 07 12 34 56 78', uri: C1 },
+  { id: 'm2', name: 'Miguel Walters', phone: '+225 05 21 43 65 87', uri: C2, tag: 'Proche confiance' },
+  { id: 'n1', name: 'Nathalie Koné', phone: '+225 07 55 44 33 22', uri: C3 },
+  { id: 'p1', name: 'Paul Yao', phone: '+225 01 33 22 11 00', uri: C1 },
+  { id: 's1', name: 'Sophie Traoré', phone: '+225 07 66 77 88 99', uri: C3, tag: 'Petite-fille' },
+];
+
+function sortContacts(contacts: Contact[]): Contact[] {
+  return [...contacts].sort((a, b) => a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' }));
+}
+
+function ContactRow({ item }: { item: Contact }) {
+  const dial = () => {
+    const raw = item.phone.replace(/\s/g, '');
+    Linking.openURL(`tel:${raw}`).catch(() => {});
+  };
+
   return (
-    <View className="flex-row items-center justify-between gap-4 rounded-xl bg-white p-5 shadow-sm">
-      <View className="min-w-0 flex-1 flex-row items-center gap-4">
-        <View className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-[#E8E8E8]">
-          <Image className="h-full w-full" resizeMode="cover" source={{ uri }} />
-        </View>
-        <View className="min-w-0 flex-1">
-          <Text className="text-xl font-bold text-[#1A1C1C]" numberOfLines={1}>
-            {name}
+    <Pressable
+      className="min-h-[64px] flex-row items-center gap-4 py-3 active:bg-white/70"
+      onPress={dial}>
+      <View className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#E8ECF4]">
+        <Image className="h-full w-full" resizeMode="cover" source={{ uri: item.uri }} />
+      </View>
+      <View className="min-w-0 flex-1 justify-center">
+        <Text className="text-base font-bold text-[#1A1C1C]" numberOfLines={1} style={{ lineHeight: 22 }}>
+          {item.name}
+        </Text>
+        <View className="mt-1 flex-row flex-wrap items-center gap-x-2 gap-y-0.5">
+          <Text className="text-sm leading-5 text-[#6B7280]" numberOfLines={1}>
+            {item.phone}
           </Text>
-          <Text className="text-base font-medium uppercase tracking-wide text-[#106D20]">{relation}</Text>
+          {item.tag ? (
+            <Text className="text-xs font-semibold text-[#0D9488]">{item.tag}</Text>
+          ) : null}
         </View>
       </View>
-      <Pressable className="h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#00569F] active:opacity-90">
-        <Ionicons color="#FFFFFF" name="call" size={26} />
-      </Pressable>
-    </View>
+      <View className="h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#D4E3FF]">
+        <Ionicons color={BLUE} name="call-outline" size={20} />
+      </View>
+    </Pressable>
   );
+}
+
+function RowSeparator() {
+  return <View className="ml-16 h-px bg-[#E8ECF4]" />;
 }
 
 export default function UrgencesContactsScreen() {
   const insets = useSafeAreaInsets();
+  const [query, setQuery] = useState('');
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return ALL_CONTACTS;
+    return ALL_CONTACTS.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.phone.replace(/\s/g, '').includes(q.replace(/\s/g, '')) ||
+        (c.tag?.toLowerCase().includes(q) ?? false),
+    );
+  }, [query]);
+
+  const sorted = useMemo(() => sortContacts(filtered), [filtered]);
+
+  const listBottomPad = 280 + insets.bottom;
 
   return (
-    <SafeAreaView className="flex-1 bg-[#F9F9F9]" edges={['top']}>
-      <View className="z-40 flex h-20 w-full flex-row items-center justify-between border-b border-stone-200/80 bg-stone-50 px-5">
-        <View className="min-w-0 flex-1 flex-row items-center gap-3">
-          <Pressable className="shrink-0 rounded-full p-2 active:opacity-70" onPress={() => router.back()}>
-            <Ionicons color="#1E40AF" name="arrow-back" size={24} />
-          </Pressable>
-          <Text className="truncate text-xl font-bold tracking-tight text-blue-900">Urgences</Text>
-        </View>
-        <Text className="shrink-0 text-lg font-black text-blue-900">Akwaba</Text>
+    <SafeAreaView className="flex-1" style={{ backgroundColor: BG }} edges={['top']}>
+      <View className="flex-row items-start justify-between px-5 pb-2 pt-3">
+        <Text className="flex-1 pr-3 text-3xl font-black tracking-tight text-[#1A1C1C]">Contacts</Text>
       </View>
 
-      <ScrollView className="flex-1 px-5 pt-6" contentContainerStyle={{ paddingBottom: 200 }} showsVerticalScrollIndicator={false}>
-        <View className="mb-8">
-          <Text className="mb-3 text-4xl font-black leading-tight text-[#1A1C1C] sm:text-5xl">Vos proches</Text>
-          <Text className="text-lg leading-relaxed text-[#40493D]">
-            Contactez rapidement vos personnes de confiance en cas de besoin.
-          </Text>
+      <View className="px-5 pb-4">
+        <View className="flex-row items-center gap-3 rounded-full bg-[#E8ECF4] px-4 py-3.5">
+          <Ionicons color="#6B7280" name="search-outline" size={22} />
+          <TextInput
+            className="min-h-[24px] flex-1 py-0 text-base leading-5 text-[#1A1C1C]"
+            placeholder="Nom, numéro ou lien…"
+            placeholderTextColor="#9CA3AF"
+            value={query}
+            onChangeText={setQuery}
+          />
+          <Pressable className="p-1 active:opacity-70" hitSlop={8}>
+            <Ionicons color="#6B7280" name="mic-outline" size={22} />
+          </Pressable>
         </View>
+      </View>
 
-        <View className="gap-4">
-          <ContactRow name="Marie Dubois" relation="Fille" uri={C1} />
-          <ContactRow name="Jean-Pierre" relation="Fils" uri={C2} />
-          <ContactRow name="Lucie Martin" relation="Petite-fille" uri={C3} />
-        </View>
-
-        <Pressable className="mt-8 h-20 w-full flex-row items-center justify-center gap-3 rounded-xl bg-[#9DF898] active:opacity-95">
-          <Ionicons color="#1A7425" name="person-add-outline" size={24} />
-          <Text className="text-xl font-bold text-[#1A7425]">Ajouter un proche</Text>
-        </Pressable>
-
-        <View className="mt-10 gap-3 rounded-xl bg-[#FFDBCF] p-6">
-          <View className="flex-row items-center gap-3">
-            <Ionicons color="#380D00" name="information-circle" size={28} />
-            <Text className="text-xl font-bold text-[#380D00]">Aide immédiate</Text>
-          </View>
-          <Text className="text-lg text-[#802A00]">
-            En cas de danger immédiat, utilisez le bouton SOS en bas à droite de l’écran.
-          </Text>
-        </View>
-      </ScrollView>
-
-      <Pressable
-        className="absolute bottom-28 right-6 z-[60] h-20 w-20 items-center justify-center rounded-full bg-[#993300] shadow-2xl active:opacity-90"
-        onPress={() => replaceWithHomeTab('sos')}>
-        <Ionicons color="#FFFFFF" name="warning" size={28} />
-        <Text className="text-sm font-black tracking-widest text-white">SOS</Text>
-      </Pressable>
+      <View className="min-h-0 flex-1 overflow-hidden rounded-t-3xl bg-white">
+        <FlatList
+          data={sorted}
+          keyExtractor={(item) => item.id}
+          style={{ flex: 1 }}
+          contentContainerStyle={{
+            paddingHorizontal: 20,
+            paddingTop: 8,
+            paddingBottom: listBottomPad,
+          }}
+          showsVerticalScrollIndicator={false}
+          ItemSeparatorComponent={RowSeparator}
+          ListEmptyComponent={
+            <View className="items-center py-16">
+              <Ionicons color="#9CA3AF" name="people-outline" size={48} />
+              <Text className="mt-4 text-center text-base font-semibold text-[#1A1C1C]">Aucun contact</Text>
+              <Text className="mt-1 text-center text-sm text-[#6B7280]">Modifiez votre recherche.</Text>
+            </View>
+          }
+          renderItem={({ item }) => <ContactRow item={item} />}
+          ListFooterComponent={
+            <View className="mt-4 pb-2">
+              <Pressable className="flex-row items-center justify-center gap-2 rounded-full border border-[#00569F]/25 bg-[#F4F7FC] py-3.5 active:bg-[#EEF4FB]">
+                <Ionicons color={BLUE} name="person-add-outline" size={20} />
+                <Text className="text-sm font-bold" style={{ color: BLUE }}>
+                  Ajouter un contact
+                </Text>
+              </Pressable>
+            </View>
+          }
+        />
+      </View>
 
       <AkwabaHomeBottomNav activeTab={null} onNavigateToTab={replaceWithHomeTab} />
     </SafeAreaView>
