@@ -38,6 +38,7 @@ type ActionItem = {
 const CIRCLE_SIZE = 80;
 /** Même largeur pour toutes les pastilles (évite SOS trop petit vs les autres) */
 const LABEL_WIDTH = 132;
+const SHORTCUTS_PER_ROW = 2;
 
 function PebbleShortcut({ item }: { item: ActionItem }) {
   const r = CIRCLE_SIZE / 2;
@@ -210,6 +211,14 @@ export default function AddTabScreen() {
     []
   );
 
+  const actionRows = useMemo(() => {
+    const rows: ActionItem[][] = [];
+    for (let i = 0; i < actions.length; i += SHORTCUTS_PER_ROW) {
+      rows.push(actions.slice(i, i + SHORTCUTS_PER_ROW));
+    }
+    return rows;
+  }, [actions]);
+
   return (
     <View className="flex-1" style={{ backgroundColor: PRIMARY }}>
       <Animated.View
@@ -261,7 +270,7 @@ export default function AddTabScreen() {
               style={[
                 shortcutsStyle,
                 {
-                  marginTop: 50,
+                  marginTop: 100,
                 },
               ]}>
               <View style={{ alignItems: 'center', gap: shortcutGapV }}>
